@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BarCamp Brisbane Tweets</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/application.css" />
+</head>
+<body>
+  <h1><img src="/images/barcamp.jpg" alt="Tweets about BarCamp Brisbane" /></h1>
+  <ul>
+    <% @tweets.each do |tweet| %>
+      <li>
+        <h2><%= tweet.text %></h2>
+        <p>@<%= tweet.from_user %></p>
+      </li>
+    <% end %>
+  </ul>
+</body>
+</html>
